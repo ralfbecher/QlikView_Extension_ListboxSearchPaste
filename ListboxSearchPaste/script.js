@@ -12,7 +12,7 @@ Use at your own risk.
     $('.PopupSearch input').live('paste',function(event){
       if (window.clipboardData) {
             try{
-              event.target.value=window.clipboardData.getData('Text').replace(/\r?\n/g, ' ').trim();
+              event.target.value=window.clipboardData.getData('Text').replace(/[\r\n]+/g, ' ').trim();
               event.preventDefault();
               return false;
             } catch(e){
