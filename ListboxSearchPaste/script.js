@@ -9,7 +9,7 @@ Use at your own risk.
 */
 (function($){
   Qva.AddDocumentExtension('ListboxSearchPaste', function() {
-    $('.PopupSearch input').live('paste',function(event){
+	$( document ).on('paste', '.PopupSearch input', function(event){
       if (window.clipboardData) {
             try{
               event.target.value=window.clipboardData.getData('Text').replace(/[\r\n]+/g, ' ').trim();
