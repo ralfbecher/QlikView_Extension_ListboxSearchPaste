@@ -8,17 +8,20 @@ TIQ Solutions takes no responsibility for any code.
 Use at your own risk. 
 */
 (function($){
-  Qva.AddDocumentExtension('ListboxSearchPaste', function() {
-	$( document ).on('paste', '.PopupSearch input', function(event){
-      if (window.clipboardData) {
-            try{
-              event.target.value=window.clipboardData.getData('Text').replace(/[\r\n]+/g, ' ').trim();
-              event.preventDefault();
-              return false;
-            } catch(e){
-              //it was just a try
-            }
-                                               }
-    });
-  });
+	Qva.AddDocumentExtension('ListboxSearchPaste', function() {
+		$( document ).on('paste', '.PopupSearch input', function(event){
+		if (window.clipboardData) {
+			try{
+				// works like wildcard search: XXXX* YYYY*
+				event.target.value = window.clipboardData.getData('Text').replace(/[\r\n]+/g, ' ').trim();
+				// works for exact search: (XXXX|YYYY)
+				//event.target.value = '(' + window.clipboardData.getData('Text').trim().replace(/[\r\n]+/g, '|') + ')';
+				event.preventDefault();
+				return false;
+			} catch(e){
+				//it was just a try
+			}
+											   }
+		});
+	});
 })(jQuery);
