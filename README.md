@@ -8,8 +8,11 @@ This extension replaces the line breaks in the pasted string with spaces so mult
 A list of values like this:
 
 Aaaa
+
 Bb
+
 Cccc
+
 Ddd
 
 will be pasted as a one-line string. There are two modes:
