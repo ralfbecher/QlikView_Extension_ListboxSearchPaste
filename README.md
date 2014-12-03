@@ -17,13 +17,13 @@ Ddd
 
 will be pasted as a one-line string. There are two modes:
 
-1. Normal Mode:
+**Normal Mode:**
 
 Values pasted as: "Aaaa Bb Cccc Ddd"
 
 This will also select values in Listbox like a wildcard search "Aaaa*" and so on.
 
-2. Exact Search Mode:
+**Exact Search Mode:**
 
 Values pasted as: "(Aaaa|Bb|Cccc|Ddd)"
 
