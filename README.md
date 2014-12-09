@@ -17,7 +17,7 @@ Ddd
 
 will be pasted as a one-line string. There are two modes:
 
-**Normal Mode:**
+**Normal Search Mode (default):**
 
 Values pasted as: "Aaaa Bb Cccc Ddd"
 
@@ -27,7 +27,7 @@ This will also select values in Listbox like a wildcard search "Aaaa*" and so on
 
 Values pasted as: "(Aaaa|Bb|Cccc|Ddd)"
 
-The mode can be switched in the script.js file by setting variable exactSearch (true/false).
+The search mode can be switched via QlikView variable "vListboxSearchPasteMode" with possible values "normal", "exact". The variable name and used values can be changed in script.js file. After changing the variable value in QlikView you need to press F5 to re-render the extension and change the search mode.
 
 ![QlikView Extension ListboxSearchPaste](screenshot.PNG)
 
